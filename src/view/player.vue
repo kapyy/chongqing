@@ -34,7 +34,6 @@
       }
     },
     mounted() {
-      this.endPlay()
       this.polling()
     },
     methods: {
