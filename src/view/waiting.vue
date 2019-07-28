@@ -24,7 +24,7 @@
       }
     },
     mounted() {
-        this.timmer = setInterval(this.Polling(), 10000 )
+      this.timmer = setInterval(this.Polling, 100 )
     },
     methods: {
       async Polling() {
@@ -39,10 +39,6 @@
         }
       }
     },
-    destroyed() {
-      clearTimeout(this.timmer)
-    }
-
 
   }
 </script>

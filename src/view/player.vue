@@ -2,7 +2,7 @@
   <div class='index'>
     <h1>重庆</h1>
     <div v-for="(item,index) in videoMap" :key="index">
-      <video v-if='index==videoNo' controls="controls" loop='loop' @ended="endPlay" autoplay="autoplay" ref="video"
+      <video v-if='index==videoNo' controls="controls"  @ended="endPlay" autoplay="autoplay" ref="video"
         width="200px">
         <source :src='item' type="video/mp4">
       </video>
@@ -24,8 +24,8 @@
     data() {
       return {
         videoMap: [
-          video2,
           video1,
+          video2,
         ],
         videoNo: 0,
         sum: 1,
@@ -54,15 +54,20 @@
             clearInterval(this.jishiqi)
           } else {
             console.log( this.videoNo)
-            this.videoNo = 1
+            this.videoNo = 0
           }
         })
 
       },
 
       async endPlay() {
-        let res = await API.endPlay()
-      },
+        //如果不是在等待状态就只是
+        if(!this.waiting){
+          let res = await API.endPlay()
+        }else{
+          this.$refs.video[0].play()    
+        }
+      }
     },
 
   }
