@@ -64,6 +64,8 @@
         //如果不是在等待状态就只是
         if(!this.waiting){
           let res = await API.endPlay()
+          this.$refs.video[0].play()    
+
         }else{
           this.$refs.video[0].play()    
         }
