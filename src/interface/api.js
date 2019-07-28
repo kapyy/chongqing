@@ -1,22 +1,31 @@
 import axios from "axios";
-
-var greetingUrl = '/greeting'
-
-
-//自动补全
-function greeting(params) {
-  return post(greetingUrl, params)
+var initUrl = '/init'
+var playVideoUrl = '/playVideo'
+var endPlayUrl = '/endPlay'
+var chooseVideoyUrl = '/chooseVideo'
+//初始化和轮询
+function init(params) {
+  return post(initUrl, params)
 }
-
-
+// 播放视屏palyer用的
+function playVideo(params) {
+  return post(playVideoUrl, params)
+}
+// 播放视屏完成
+function endPlay(params) {
+  return post(endPlayUrl, params)
+}
+// 播放视屏完成
+function chooseVideo(params) {
+  return post(chooseVideoyUrl, params)
+}
 // post请求的promise封装
 function post(url, params) {
   return new Promise((reslove, reject) => {
     axios.post(url, params)
       .then(function (response) {
-        debugger
-        if (response.data.resCode == 0) {
-          reslove({data:response.data.data,total:response.data.total,keyWords:response.data.keywords})
+        if (response.data.resCode === '1') {
+          reslove(response.data.data)
         } else {
           reject(response.data.resultMsg)
         }
@@ -42,8 +51,9 @@ function get(url, params) {
       });
   })
 }
-
-
 export {
-  greeting,
+  init,
+  playVideo,
+  endPlay,
+  chooseVideo,
 }
