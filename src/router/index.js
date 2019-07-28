@@ -25,7 +25,7 @@ export default new Router({
     },
     {
       path: '/',
-      redirect:'/player'
+      redirect:'/waiting'
     }
   ]
 })
