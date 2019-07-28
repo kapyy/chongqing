@@ -1,0 +1,89 @@
+html, body {
+	-webkit-font-smoothing: antialiased;
+	-webkit-tap-highlight-color: transparent;
+	display: flex;
+    justify-content: center;
+}
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fieldset, lengend, button, input, textarea, th, td {
+	margin: 0;
+	padding: 0;
+	font-weight: normal
+}
+ul {
+	list-style: none
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+textarea {
+	overflow: auto;
+	resize: none
+}
+a, button {
+	cursor: pointer
+}
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box
+ 
+}
+a {
+	text-decoration: none;
+	color:inherit;
+	-webkit-tap-highlight-color:transparent;
+}
+*{
+	-webkit-tap-highlight-color:transparent;
+}
+body {
+	font-family: SourceHanSerifCN-Medium;
+	font-size: 16px;
+	background: #fff;
+}	
+.ban-body-scroll {
+	height: 100%;
+	overflow: hidden;
+}
+.el-button--primary {
+    color: #FFF;
+    background-color: #3D4A76 !important;
+    border-color: #3D4A76 !important;
+}
+.el-button--primary.is-disabled{
+	color: #FFF;
+    background-color: #EBEBEB !important;
+    border-color: #EBEBEB !important;
+}
+
+
+::-webkit-scrollbar {
+	width: 5px; /*对垂直流动条有效*/
+	height: 5px; /*对水平流动条有效*/
+  }
+  
+  /*定义滚动条的轨道颜色、内阴影及圆角*/
+  ::-webkit-scrollbar-track {
+	background-color: transparent;
+  }
+  
+  /*定义滑块颜色、内阴影及圆角*/
+  ::-webkit-scrollbar-thumb {
+	border-radius: 7px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+	background-color: #3d4a74;
+  }
+  
+  /*定义两端按钮的样式*/
+  ::-webkit-scrollbar-button {
+	background-color: transparent;
+  }
+  
+  /*定义右下角汇合处的样式*/
+  ::-webkit-scrollbar-corner {
+	background: transparent;
+  }
+	

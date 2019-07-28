@@ -1,0 +1,123 @@
+/* 超出显示省略号 */
+.text-overflow--1 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+.text-overflow--2 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+.text-overflow--3 {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+.flex {
+	flex: 1;
+}
+b {
+	color: #1365C0;
+}
+
+.summary .ivu-select-selected-value {
+	background: #1365C0;
+}
+.ivu-tabs-nav-container,.ivu-tabs-bar {
+	display: none;
+}
+.datePicker {
+	max-height: 30px;
+}
+
+body, .container, #app {
+	background: #151517!important;
+}
+body {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/ 
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px
+}
+/*定义滚动条轨道*/ 
+::-webkit-scrollbar-track {
+    /*background-color: transparent;*/
+  background-color: #151517;
+  border-radius: 0;
+/*    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em*/
+}
+/*定义滑块 内阴影+圆角*/ 
+::-webkit-scrollbar-thumb {
+	border: #37363D;
+	background: #37363D;
+/*  -webkit-border-radius: 0;
+  -moz-border-radius: 0;*/
+  border-radius: 0
+}
+/*::-webkit-scrollbar-corner {
+	background: #151517!important;
+}
+*/
+.ivu-checkbox-inner {
+	background: #37363D!important;
+	border: none!important;
+}
+
+.ivu-checkbox-checked .ivu-checkbox-inner {
+	background: #1093DE!important;
+}
+.ivu-checkbox-inner::after {
+	border-color: transparent;
+}
+
+
+
+
+.ivu-picker-panel-sidebar {
+	width: 96px!important;
+	font-size: 15px!important;
+}
+
+
+.item:hover b{
+
+		color: white!important;
+
+};
+
+.ivu-select-item-focus {
+	background: none!important;
+}
+
+#cailian-select .ivu-select-selection {
+	height: 30px;
+	line-height: 30px;
+	font-size: 15px;
+}
+#cailian-select .ivu-select-selected-value {
+	height: 30px;
+	line-height: 30px;
+	font-size: 15px;
+}
+
+
+
+
+
